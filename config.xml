@@ -12,6 +12,9 @@
         	<icon src="icon/icon-144.png" density="xxhdpi" />
         	<icon src="icon/icon-192.png" density="xxxhdpi" />
     	</platform>
+	<platform name="windows">
+		<icon src="icon/icon-96.png" />
+	</platform>
 	<content src="index.html" />
 	<access origin="*" />
 </widget>
