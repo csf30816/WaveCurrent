@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>WaveCurrent Settings</title>
+        <link href="./assets/fonts.css" rel="stylesheet" type="text/css">
+        <link href="./assets/style.css" rel="stylesheet" type="text/css">
+        <script src="./assets/jquery.min.js"></script>
+        <script src="./assets/simpleWeather.min.js"></script>
+        <script src="./assets/swal.min.js"></script>
+        <script src="./assets/loc.js"></script>
+        <style>
+        .settings {
+          background-color: rgba(200,200,200,0.8);
+          top: 50px;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          position: fixed;
+          padding: 10px 0;
+          z-index: 1;
+        }
+        .settings * {
+          z-index: 10000;
+          position: inherit;
+        }
+        .settings button {
+          width: 100%;
+          font-size: 1rem;
+          padding: 15px 10px;
+          border: none;
+          background-color: transparent;
+          transition: all 0.15s ease;
+          margin-bottom: 5px;
+          position: relative;
+        }
+        .settings button:active {
+          background-color: #bbb;
+        }
+        </style>
+    </head>
+    <body class="storm">
+      <div class="top">
+        <a href="./index.html">
+          <button>
+            <i class="pi-exit"></i>
+          </button>
+        </a>
+      </div>
+      <div class="settings">
+        <button onclick="javascript:changeLoc()">
+          Change Location
+          <i style="color: #fff;float: right;" class="loc">
+            Loading...
+          </i>
+        </button>
+        <button onclick="javascript:changeUni()">
+          Change Units
+          <i style="color: #fff;float: right;" class="uni">
+            Loading...
+          </i>
+        </button>
+      </div>
+      <div class="container">
+        <h2 class="center">Settings</h2>
+      </div>
+      <script>
+      $('.loc').text(localStorage.getItem('location') || 'New York City, NY');
+      if (localStorage.getItem('unit') == 'C') {
+        $('.uni').text('Metric (C/KPH)');
+      } else {
+        $('.uni').text('Imperial (F/MPH)');
+      }
+      var changeLoc = function() {
+        setTimeout(function(){
+          swal({
+            title: 'Location',
+            input: 'text',
+            inputValue: localStorage.getItem('location') || 'New York City, NY',
+            showCancelButton: false,
+            inputValidator: (value) => {
+              return !value && 'You need to write something!'
+            }
+          }).then(function(result) {
+            localStorage.setItem('location', result.value);
+            $('.loc').text(localStorage.getItem('location') || 'New York City, NY');
+          });
+        },500);
+      }
+      var changeUni = function() {
+        setTimeout(function(){
+          swal({
+            title: 'Display Units',
+            inputValue: localStorage.getItem('location') || 'New York City, NY',
+            showCancelButton: true,
+            cancelButtonText: 'Metric (C/KPH)',
+            confirmButtonText: 'Imperial (F/MPH)'
+          }).then(function(result) {
+            if (result.value) {
+              localStorage.setItem('unit', 'F');
+              $('.uni').text('Imperial (F/MPH)');
+            } else if (result.dismiss === 'cancel') {
+              localStorage.setItem('unit', 'C');
+              $('.uni').text('Metric (C/KPH)');
+            }
+          });
+        },500);
+      }
+      </script>
+    </body>
+</html>

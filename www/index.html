@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <title>WaveCurrent</title>
+        <link href="./assets/fonts.css" rel="stylesheet" type="text/css">
+        <link href="./assets/style.css" rel="stylesheet" type="text/css">
+        <script src="./assets/jquery.min.js"></script>
+        <script src="./assets/simpleWeather.min.js"></script>
+        <script src="./assets/loc.js"></script>
+    </head>
+    <body>
+      <div class="top">
+        <a href="./settings.html">
+          <button>
+            <i class="pi-cog"></i>
+          </button>
+        </a>
+      </div>
+      <div id="left"></div>
+      <div class="container" id="weather">
+        <h1 class="center">??&deg;F <small class="mid">Loading</small></h1>
+      </div>
+      <script>
+      (function(d){
+        var ce=function(e,n){var a=document.createEvent("CustomEvent");a.initCustomEvent(n,true,true,e.target);e.target.dispatchEvent(a);a=null;return false},
+        nm=true,sp={x:0,y:0},ep={x:0,y:0},
+        touch={
+          touchstart:function(e){sp={x:e.touches[0].pageX,y:e.touches[0].pageY}},
+          touchmove:function(e){nm=false;ep={x:e.touches[0].pageX,y:e.touches[0].pageY}},
+          touchend:function(e){if(nm){ce(e,'fc')}else{var x=ep.x-sp.x,xr=Math.abs(x),y=ep.y-sp.y,yr=Math.abs(y);if(Math.max(xr,yr)>20){ce(e,(xr>yr?(x<0?'swl':'swr'):(y<0?'swu':'swd')))}};nm=true},
+          touchcancel:function(e){nm=false}
+        };
+        for(var a in touch){d.addEventListener(a,touch[a],false);}
+      })(document);
+      </script>
+      <script>
+        var data = window.localStorage;
+        var units = data.getItem("unit") || 'f';
+        var place = data.getItem("location") || 'New York City, NY';
+
+        $(document).ready(function() {
+          $('#o').css({'display':'block'});
+          $('#c').css({'display':'none'});
+          getWeather(); //Get the initial weather.
+          setInterval(getWeather, 300000);
+        });
+
+        function getWeather() {
+          $.simpleWeather({
+            location: place,
+            woeid: '',
+            unit: units,
+            success: function(weather) {
+              html = '<h1 class="center"><span class="icon-'+weather.code+'"></span> '+weather.temp+'&deg;'+weather.units.temp+' <small class="mid">'+weather.currently+'</small></h1>';
+              html += '<small class="block center">'+weather.city+', '+weather.region+' '+weather.country+'</small>';
+              var f = weather.forecast;
+              html += '<br><br>';
+              html += 'The high for the day is '+f[0].high+'&deg;'+weather.units.temp;
+              html += ' while the low of the day is '+f[0].low+'&deg;'+weather.units.temp+'. ';
+              html += 'The wind is blowing '+weather.wind.direction+' at a speed of '+weather.wind.speed+weather.units.speed+'. ';
+              html += '<br><br>Seven day forecast:'
+              html += '<div class="scroll">';
+              for (i=0;i<=6;i++) {
+                if (i===0) {
+                  html += '<div class="cell gold"><i class="pi-star-f"></i> ';
+                  html += '<b>Today</b>';
+                } else {
+                  html += '<div class="cell">';
+                  html += '<b>'+f[i].day+'</b> ('+f[i].date+')';
+                }
+                html += '<h3 class="center"><span class="icon-'+f[i].code+'"></span>'+f[i].low+'-'+f[i].high+'&deg;'+weather.units.temp+'</h3>';
+                html += '<small class="block center">'+f[i].text+'</small>';
+                html += '</div>';
+              }
+              html += '</div>';
+
+              $("#weather").html(html);
+            }
+          });
+        }
+      </script>
+    </body>
+</html>
