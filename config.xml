@@ -15,6 +15,9 @@
 	<platform name="windows">
 		<icon src="icon/icon-96.png" />
 	</platform>
+	<platform name="ios">
+		<icon src="icon/icon-96.png" />
+	</platform>
 	<content src="index.html" />
 	<access origin="*" />
 </widget>
