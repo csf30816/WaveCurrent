@@ -1,0 +1,191 @@
+body {
+  background-color: #000;
+  background: url(../assets/background.mountain.jpg);
+  background-size: 210vh;
+  background-position: right top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body.storm {
+  background-color: #000;
+  background: url(../assets/background.springstorm.jpg);
+  background-size: 210vh;
+  background-position: left top;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body * {
+  font-family: 'Quicksand', 'Roboto', sans-serif;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  text-align: justify;
+}
+
+.container {
+  background-color: rgba(0,0,0,0.45);
+  max-width: 100%;
+  min-height: 100%;
+  color: #fcfcfc;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.container h1 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 3rem;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.container h2 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 2rem;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.container h3 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 1.5rem;
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+  box-sizing: border-box;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+}
+
+.container small {
+  margin: 0;
+  font-weight: lighter;
+  font-size: 0.8rem;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.container .mid {
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+
+.container .sup {
+  vertical-align: super;
+  box-sizing: border-box;
+}
+
+.container .sub {
+  vertical-align: sub;
+  box-sizing: border-box;
+}
+
+.container .center {
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.container .big {
+  font-size: 5rem;
+}
+
+.container .block {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.container .scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 5px;
+  padding-left: 1px;
+  display: flex;
+  z-index: 100000;
+  position: relative;
+}
+
+.container .scroll .cell {
+  background-color: rgba(0,0,0,0.3);
+  min-width: 200px;
+  border: 1px solid #fff;
+  margin-left: -1px;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.container .scroll .cell.gold {
+  background-color: rgba(0, 31, 63, 0.8);
+  color: #FFDC00;
+}
+
+.container .scroll .cell [class^="icon"] {
+  display: block;
+  font-size: 4rem;
+}
+
+.top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  z-index: 10000000;
+}
+
+.top button {
+  background-color: transparent;
+  border: none;
+  box-sizing: border-box;
+  margin: 10px;
+  padding: 0;
+  font-size: 2rem;
+  color: white;
+  height: auto;
+  cursor: pointer;
+}
+
+.top button a {
+  color: inherit;
+  text-decoration: none;
+}
+
+#c {
+  color: #000;
+}
+
+#left {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+@media (max-width: 400px) {
+  *[class^="icon"] {
+    display: block;
+  }
+}

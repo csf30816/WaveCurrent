@@ -1,0 +1,130 @@
+/* vietnamese */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(../assets/NUrn2XQrRfyGZp5MknntaRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(../assets/s2PXW4WrV3VLrOUpHiqsfRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Quicksand Regular'), local('Quicksand-Regular'), url(../assets/sKd0EMYPAh5PYCRKSryvW1tXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Weather';
+  src: url(../assets/weather.ttf) format('truetype'), url(../assets/weather.woff) format('woff');
+}
+
+*[class^="icon"] {
+  font-family: 'Weather';
+  font-size: 6rem;
+  margin: auto;
+  display: inline-block;
+  width: fit-content;
+  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  font-weight: normal;
+}
+
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
+
+/* START PICONS (c) 2017 ELIJAH PORTER */
+@charset "UTF-8";
+
+@font-face {
+  font-family: "picons";
+  src:url("../assets/picons.eot");
+  src:url("../assets/picons.eot?#iefix") format("embedded-opentype"),
+    url("../assets/picons.woff") format("woff"),
+    url("../assets/picons.ttf") format("truetype"),
+    url("../assets/picons.svg#1503450376") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: "picons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*="pi-"]:before,[class^=pi-]:before{
+  font-family:picons!important;
+  font-style:normal!important;
+  font-weight:400!important;
+  font-variant:normal!important;
+  text-transform:none!important;
+  speak:none;
+  line-height:1;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale
+  vertical-align: middle;
+}
+
+.pi-chat:before{content:"\66"}.pi-download:before{content:"\67"}.pi-mail:before{content:"\68"}.pi-upload:before{content:"\69"}.pi-arrow-down:before{content:"\6a"}.pi-arrow-left:before{content:"\6b"}.pi-arrow-right:before{content:"\6c"}.pi-arrow-up:before{content:"\6d"}.pi-windows:before{content:"\6e"}.pi-chevron-down:before{content:"\6f"}.pi-chevron-right:before{content:"\70"}.pi-chevron-left:before{content:"\71"}.pi-chevron-up:before{content:"\72"}.pi-chevron2-down:before{content:"\73"}.pi-chevron2-left:before{content:"\74"}.pi-chevron2-right:before{content:"\75"}.pi-chevron2-up:before{content:"\76"}.pi-redo:before{content:"\77"}.pi-undo:before{content:"\78"}.pi-wifi:before{content:"\79"}.pi-cloud:before{content:"\7a"}.pi-unlock:before{content:"\41"}.pi-lock:before{content:"\42"}.pi-send:before{content:"\43"}.pi-menu-h:before{content:"\44"}.pi-menu-v:before{content:"\45"}.pi-newtab:before{content:"\46"}.pi-menu-bars:before{content:"\47"}.pi-exit:before{content:"\48"}.pi-battery-empty:before{content:"\61"}.pi-battery-full:before{content:"\62"}.pi-battery-half:before{content:"\63"}.pi-battery-quarter:before{content:"\64"}.pi-battery-third:before{content:"\65"}.pi-heart:before{content:"\49"}.pi-heart-f:before{content:"\4a"}.pi-toggle:before{content:"\4b"}.pi-toggle-f:before{content:"\4c"}.pi-mic:before{content:"\4d"}.pi-mute:before{content:"\4e"}.pi-volume:before{content:"\4f"}.pi-volume-med:before{content:"\50"}.pi-volume-min:before{content:"\51"}.pi-search:before{content:"\52"}.pi-cog:before{content:"\53"}.pi-star:before{content:"\54"}.pi-star-f:before{content:"\55"}.pi-star-half:before{content:"\56"}.pi-star-half-f:before{content:"\57"}.pi-copy:before{content:"\58"}
