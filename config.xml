@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="cf.freewayapps.wave.current" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>WaveCurrent</name>
+    <description>Easily and quickly get the current weather in almost any area!</description>
+    <author email="elijahjamesporter@gmail.com" href="https://csf30816.github.io">Elijah Porter</author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
