@@ -1,8 +1,17 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="cf.freewayapps.wave.current" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>WaveCurrent</name>
-    <description>Easily and quickly get the current weather in almost any area!</description>
-    <author email="elijahjamesporter@gmail.com" href="https://csf30816.github.io">Elijah Porter</author>
-    <content src="index.html" />
-    <access origin="*" />
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="cf.freewayapps.wave.current" version="1.0.0">
+	<name>WaveCurrent</name>
+	<description>Easily and quickly get the current weather in almost any area!</description>
+	<author email="elijahjamesporter@gmail.com" href="https://csf30816.github.io">Elijah Porter</author>
+	<platform name="android">
+		<icon src="icon/icon-36.png" density="ldpi" />
+        	<icon src="icon/icon-48.png" density="mdpi" />
+        	<icon src="icon/icon-72.png" density="hdpi" />
+        	<icon src="icon/icon-96.png" density="xhdpi" />
+        	<icon src="icon/icon-144.png" density="xxhdpi" />
+        	<icon src="icon/icon-192.png" density="xxxhdpi" />
+    	</platform>
+	<icon src="icon/icon-96.png" />
+	<content src="index.html" />
+	<access origin="*" />
 </widget>
